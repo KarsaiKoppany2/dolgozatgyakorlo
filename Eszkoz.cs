@@ -30,5 +30,15 @@ namespace dolgozatgyakorlo
             }
         }
         public static int OsszesRegisztraltEszkoz { get { return osszesRegisztraltEszkoz; } }
+        public Eszkoz(string azonosito, string nev, string kategoria, int napiDij) : this(azonosito, nev, kategoria, napiDij, 1) { }
+        public Eszkoz (string azonosito, string nev, string kategoria, int napiDij, int keszlet) 
+        {
+            Azonosito = azonosito;
+            Nev = nev;
+            Kategoria = kategoria;
+            NapiDij = napiDij;
+            Keszlet = keszlet;
+            osszesRegisztraltEszkoz++;
+        }
     }
 }
