@@ -40,5 +40,13 @@ namespace dolgozatgyakorlo
             Keszlet = keszlet;
             osszesRegisztraltEszkoz++;
         }
+        public override string ToString() 
+        {
+            return $"{Azonosito} {Nev} {Kategoria} - Napi díj: {NapiDij} Ft | Készlet: {Keszlet} db";
+        }
+        public int TeljesNapiBevetel() 
+        {
+            return NapiDij * Keszlet;
+        }
     }
 }
